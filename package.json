@@ -1,0 +1,13 @@
+{
+  "name": "cabinet-dentaire-app",
+  "version": "1.0.0",
+  "description": "Premium French Dentist Clinic website with scheduling and automated reminders",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "private": true
+}
