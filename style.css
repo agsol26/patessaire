@@ -956,4 +956,35 @@ footer {
     .simulator-layout {
         grid-template-columns: 1fr;
     }
-}
+    }/* Smooth Scrolling Ticker */
+      .scrolling-ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    padding: 0.5rem 0;
+    position: relative;
+    z-index: 1001;
+    }
+     .scrolling-ticker {
+    display: flex;
+    white-space: nowrap;
+    width: max-content;
+    animation: ticker-slide 20s linear infinite; /* Controls speed */
+    }
+    .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 3rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    }
+    /* Loop Animation */
+     @keyframes ticker-slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+     }   
