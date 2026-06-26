@@ -160,7 +160,7 @@ function seedDummyData() {
                 id: "RDV-5392",
                 patientLastName: "Dupont",
                 patientFirstName: "Jean",
-                patientEmail: "jean.dupont@email.fr",
+                patientEmail: "sales@theweb.ink",
                 patientPhone: "+33 6 12 34 56 78",
                 patientLang: "fr",
                 serviceName: "Bilan & Consultation Dentaire",
@@ -175,7 +175,7 @@ function seedDummyData() {
                 id: "RDV-2841",
                 patientLastName: "Smith",
                 patientFirstName: "Sarah",
-                patientEmail: "sarah.smith@example.com",
+                patientEmail: "sales@theweb.ink",
                 patientPhone: "+44 7911 123456",
                 patientLang: "en",
                 serviceName: "Détartrage & Polissage",
@@ -190,7 +190,7 @@ function seedDummyData() {
                 id: "RDV-9012",
                 patientLastName: "Gomez",
                 patientFirstName: "Carlos",
-                patientEmail: "carlos.g@email.es",
+                patientEmail: "sales@theweb.ink",
                 patientPhone: "+33 7 98 76 54 32",
                 patientLang: "fr",
                 serviceName: "Urgence Dentaire",
@@ -640,7 +640,7 @@ function triggerSimulation(type) {
     // Notification Payloads in FR/EN
     const notifications = {
         fr: {
-            confirm_wa: `✅ *Rendez-vous Confirmé !*\n\nBonjour ${appt.patientFirstName},\n\nvotre rendez-vous de *${appt.serviceName}* au Cabinet du Dr. Élise Martin est bien confirmé pour le *${formatDateFrench(appt.date)} à ${appt.time}*.\n\n📍 *Adresse :* 75 Route de la Reine, Boulogne-Billancourt.\n🏥 N'oubliez pas votre *Carte Vitale*.\n\nPour déplacer ou annuler ce rendez-vous, merci de répondre :\n*1* - Confirmer la présence\n*2* - Modifier\n*3* - Annuler`,
+            confirm_wa: `✅ *Rendez-vous Confirmé !*\n\nBonjour ${appt.patientFirstName},\n\nvotre rendez-vous de *${appt.serviceName}* au Cabinet du Dr. Nom Démo est bien confirmé pour le *${formatDateFrench(appt.date)} à ${appt.time}*.\n\n📍 *Adresse :* 75 Route de la Reine, Boulogne-Billancourt.\n🏥 N'oubliez pas votre *Carte Vitale*.\n\nPour déplacer ou annuler ce rendez-vous, merci de répondre :\n*1* - Confirmer la présence\n*2* - Modifier\n*3* - Annuler`,
             confirm_email_subject: "Confirmation de votre rendez-vous dentaire",
             confirm_email_body: `
                 <h3 style="color:#0ea5e9; font-family:'Playfair Display',serif; margin-top:0;">Confirmation de RDV</h3>
@@ -673,7 +673,7 @@ function triggerSimulation(type) {
                 <p>Accès métro : Ligne 9 (Marcel Sembat) ou Ligne 10 (Boulogne-Jean Jaurès).</p>
             `,
             
-            post_wa: `⭐ *Votre avis nous intéresse !*\n\nBonjour ${appt.patientFirstName},\n\nle Dr. Martin espère que vos soins dentaires se sont bien déroulés.\n\nComment évaluez-vous votre visite aujourd'hui ? Répondez avec un chiffre de *1 à 5* (5 étant excellent).`,
+            post_wa: `⭐ *Votre avis nous intéresse !*\n\nBonjour ${appt.patientFirstName},\n\nle Dr. Nom Démo espère que vos soins dentaires se sont bien déroulés.\n\nComment évaluez-vous votre visite aujourd'hui ? Répondez avec un chiffre de *1 à 5* (5 étant excellent).`,
             post_email_subject: "Suivi post-consultation et ordonnance",
             post_email_body: `
                 <h3 style="color:#0ea5e9; font-family:'Playfair Display',serif; margin-top:0;">Suivi de votre visite</h3>
@@ -683,7 +683,7 @@ function triggerSimulation(type) {
             `
         },
         en: {
-            confirm_wa: `✅ *Appointment Confirmed !*\n\nHello ${appt.patientFirstName},\n\nyour appointment for *${appt.serviceName}* at Dr. Élise Martin's office is confirmed for *${appt.date} at ${appt.time}*.\n\n📍 *Location :* 75 Route de la Reine, Boulogne-Billancourt.\n🏥 Please bring your ID or health card.\n\nTo manage this appointment, reply:\n*1* - Confirm Attendance\n*2* - Reschedule\n*3* - Cancel`,
+            confirm_wa: `✅ *Appointment Confirmed !*\n\nHello ${appt.patientFirstName},\n\nyour appointment for *${appt.serviceName}* at Dr. Nom Démo's office is confirmed for *${appt.date} at ${appt.time}*.\n\n📍 *Location :* 75 Route de la Reine, Boulogne-Billancourt.\n🏥 Please bring your ID or health card.\n\nTo manage this appointment, reply:\n*1* - Confirm Attendance\n*2* - Reschedule\n*3* - Cancel`,
             confirm_email_subject: "Dental Appointment Confirmation",
             confirm_email_body: `
                 <h3 style="color:#0ea5e9; font-family:'Playfair Display',serif; margin-top:0;">Appointment Confirmed</h3>
@@ -715,7 +715,7 @@ function triggerSimulation(type) {
                 <p>Subway access: Line 9 (Marcel Sembat) or Line 10 (Boulogne-Jean Jaurès).</p>
             `,
             
-            post_wa: `⭐ *Your feedback matters !*\n\nHello ${appt.patientFirstName},\n\nDr. Martin hopes your dental care went smoothly.\n\nHow would you rate your visit today? Reply with a number from *1 to 5* (5 being excellent).`,
+            post_wa: `⭐ *Your feedback matters !*\n\nHello ${appt.patientFirstName},\n\nDr. Nom Démo hopes your dental care went smoothly.\n\nHow would you rate your visit today? Reply with a number from *1 to 5* (5 being excellent).`,
             post_email_subject: "Post-visit follow-up and prescription",
             post_email_body: `
                 <h3 style="color:#0ea5e9; font-family:'Playfair Display',serif; margin-top:0;">Post-Visit Follow-Up</h3>
@@ -864,11 +864,7 @@ function showSimulationResult() {
                     to: [{ email: sim.appt.patientEmail, name: `${sim.appt.patientFirstName} ${sim.appt.patientLastName}` }],
                     subject: mailSubject
                 }],
-<<<<<<< HEAD
-                from: { email: "sales@theweb.ink", name: "Cabinet Médical Dr. Martin" },
-=======
-                from: { email: "no-reply@dentiste-martin.fr", name: "Cabinet Dentaire Dr. Martin" },
->>>>>>> d690aec48539834ed6f5ed162795762e3b48a46f
+                from: { email: "sales@theweb.ink", name: "Cabinet Médical Dr. Nom Démo" },
                 content: [{
                     type: "text/html",
                     value: mailBody
@@ -979,7 +975,7 @@ function changePortalLang(lang) {
     // Also update form inputs placeholders
     const emailField = document.getElementById('loginEmail');
     if (emailField) {
-        emailField.placeholder = lang === 'fr' ? "jean.dupont@email.fr" : "john.doe@email.com";
+        emailField.placeholder = "sales@theweb.ink";
     }
     
     // Reload lists to update language
@@ -1109,11 +1105,11 @@ function loadPortalAppointmentsAndHistory(email) {
     
     // We add static seeded history to show a realistic clinical record
     const seededHistory = [
-        { date: "2025-09-12", serviceName: "Examen Initial & Bilan", doctor: "Dr. Élise Martin", cost: "23.00 €" },
-        { date: "2026-02-15", serviceName: "Détartrage & Polissage", doctor: "Dr. Élise Martin", cost: "28.92 €" }
+        { date: "2025-09-12", serviceName: "Examen Initial & Bilan", doctor: "Dr. Nom Démo", cost: "23.00 €" },
+        { date: "2026-02-15", serviceName: "Détartrage & Polissage", doctor: "Dr. Nom Démo", cost: "28.92 €" }
     ];
     
-    const fullHistory = [...localPast.map(a => ({ date: a.date, serviceName: a.serviceName, doctor: "Dr. Élise Martin", cost: `${a.price} €` })), ...seededHistory];
+    const fullHistory = [...localPast.map(a => ({ date: a.date, serviceName: a.serviceName, doctor: "Dr. Nom Démo", cost: `${a.price} €` })), ...seededHistory];
     fullHistory.sort((a,b) => b.date.localeCompare(a.date)); // Latest treatments first
     
     fullHistory.forEach(item => {
@@ -1197,8 +1193,8 @@ function exportRgpdData() {
     const myAppts = appts.filter(a => a.patientEmail.toLowerCase() === patient.email.toLowerCase());
     
     const seededHistory = [
-        { date: "2025-09-12", serviceName: "Examen Initial & Bilan", doctor: "Dr. Élise Martin", cost: "23.00 €" },
-        { date: "2026-02-15", serviceName: "Détartrage & Polissage", doctor: "Dr. Élise Martin", cost: "28.92 €" }
+        { date: "2025-09-12", serviceName: "Examen Initial & Bilan", doctor: "Dr. Nom Démo", cost: "23.00 €" },
+        { date: "2026-02-15", serviceName: "Détartrage & Polissage", doctor: "Dr. Nom Démo", cost: "28.92 €" }
     ];
     
     const exportPayload = {

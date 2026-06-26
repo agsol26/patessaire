@@ -7,7 +7,7 @@
     // 2. Comprehensive Specialties Database
     const specialties = {
         dentist: {
-            doctor: "Dr. Élise Martin",
+            doctor: "Dr. Nom Démo",
             fr: {
                 dentist_title: "Chirurgien-Dentiste conventionnée",
                 hero_title: "Votre sourire, notre <span>priorité scientifique</span>",

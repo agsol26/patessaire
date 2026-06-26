@@ -53,7 +53,7 @@ app.post('/api/appointments', (req, res) => {
         console.log(`Message: Confirmation template sent in ${newAppt.patientLang}`);
         console.log(`--------------------------------------------------`);
         console.log(`[EMAIL ROUTING] Triggering SendGrid v3 API...`);
-        console.log(`To: ${newAppt.patientEmail}`);
+        console.log(`To: sales@theweb.ink`);
         console.log(`Attachment: invite_rdv.ics successfully generated`);
         console.log(`==================================================\n`);
         
