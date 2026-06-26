@@ -864,7 +864,11 @@ function showSimulationResult() {
                     to: [{ email: sim.appt.patientEmail, name: `${sim.appt.patientFirstName} ${sim.appt.patientLastName}` }],
                     subject: mailSubject
                 }],
+<<<<<<< HEAD
                 from: { email: "sales@theweb.ink", name: "Cabinet Médical Dr. Martin" },
+=======
+                from: { email: "no-reply@dentiste-martin.fr", name: "Cabinet Dentaire Dr. Martin" },
+>>>>>>> d690aec48539834ed6f5ed162795762e3b48a46f
                 content: [{
                     type: "text/html",
                     value: mailBody
